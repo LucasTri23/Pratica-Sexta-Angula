@@ -1,0 +1,44 @@
+<main>
+  <h1>{{ title }}</h1>
+  <table>
+    <thead>
+      <th>Nome</th>
+      <th>Nascimento</th>
+      <th>Curso</th>
+      <th>Semestre</th>
+      <th>Unidade Curricular</th>
+      <th>Nota</th>
+    </thead>
+    <tbody>
+      <tr *ngFor="let aluno of alunos">
+       
+        <ng-container *ngIf="aluno.nota >= notaCorteAprovacao;else blocoRecuperacao">
+          <td class="aprovacao">{{ aluno.nome }}</td>
+          <td class="aprovacao">{{ aluno.dataNascimento }}</td>
+          <td class="aprovacao">{{ aluno.curso }}</td>
+          <td class="numero aprovacao">{{ aluno.semestre }}</td>
+          <td class="aprovacao">{{ aluno.unidadeCurricular }}</td>
+          <td class="numero aprovacao">{{ aluno.nota }}</td>
+        </ng-container>
+        <ng-template #blocoRecuperacao>
+            <ng-container *ngIf="aluno.nota >= notaCorteReprovacao;else blocoReprov">
+              <td class="recuperacao">{{ aluno.nome }}</td>
+              <td class="recuperacao">{{ aluno.dataNascimento }}</td>
+              <td class="recuperacao">{{ aluno.curso }}</td>
+              <td class="numero recuperacao">{{ aluno.semestre }}</td>
+              <td class="recuperacao">{{ aluno.unidadeCurricular }}</td>
+              <td class="numero recuperacao">{{ aluno.nota }}</td>    
+            </ng-container>
+        </ng-template>
+        <ng-template #blocoReprov>
+          <td class="reprovacao">{{ aluno.nome }}</td>
+          <td class="reprovacao">{{ aluno.dataNascimento }}</td>
+          <td class="reprovacao">{{ aluno.curso }}</td>
+          <td class="numero reprovacao">{{ aluno.semestre }}</td>
+          <td class="reprovacao">{{ aluno.unidadeCurricular }}</td>
+          <td class="numero reprovacao">{{ aluno.nota }}</td>
+        </ng-template>       
+      </tr>
+    </tbody>
+  </table>
+</main>

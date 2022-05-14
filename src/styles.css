@@ -1,0 +1,67 @@
+h1 {
+  color: rgb(60, 122, 184);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 250%;
+}
+h2,
+h3 {
+  color: #444;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: lighter;
+}
+body {
+  margin: 1em;
+}
+body,
+input[type='text'],
+button {
+  color: rgb(243, 239, 237);
+  font-family: Cambria, Georgia, serif;
+}
+button {
+  background-color: #eee;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  color: black;
+  font-size: 1.2rem;
+  padding: 1rem;
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+}
+button:hover {
+  background-color: black;
+  color: white;
+}
+button:disabled {
+  background-color: #eee;
+  color: #aaa;
+  cursor: auto;
+}
+/* Geral: */
+* {
+  font-family: Arial, Helvetica, sans-serif;
+}
+table{
+  border:double 1px rgb(19, 18, 18);
+}
+thead{
+  background: rgb(70, 68, 68);
+}
+th{
+  border:double 2px rgb(19, 18, 18);
+}
+td{
+  border:double 2px rgb(10, 10, 10);
+}
+.aprovacao{
+  background-color: rgb(66, 165, 79);
+  }
+.recuperacao{
+  background-color: rgb(199, 51, 24);
+  }
+.reprovacao{
+  background-color: rgb(8, 8, 8);
+
+}
